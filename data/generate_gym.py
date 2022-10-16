@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 ENV_LEVEL = "Sokoban-small-v0"
 OUT_PATH = "levels/very_easy_1"
 SEED = 123
-TRAIN_SIZE = 1
-TEST_SIZE = 1
+TRAIN_SIZE = 10
+TEST_SIZE = 10
 RENDER_MODE = "tiny_rgb_array"
 
 # Other constants

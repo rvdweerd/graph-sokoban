@@ -48,7 +48,7 @@ def clone_and_detach_data(state):
     return Data.from_dict(
         {
             k: v.clone().detach() if torch.is_tensor(v) else copy.deepcopy(v)
-            for k, v in state.__dict__.items()
+            for k, v in state.__dict__['_store'].items()
         }
     )
 

@@ -16,8 +16,8 @@ class InMemorySokobanDataset(torch.utils.data.Dataset):
         def load_image(fname):
             return (255 * plt.imread(fname)[:, :, :3]).astype(np.uint8)
 
-        init_images = [load_image(f) for f in files]
-        self.init_states = [self.embedding(img) for img in init_images]
+        self.init_images = [load_image(f) for f in files]
+        self.init_states = [self.embedding(img) for img in self.init_images]
         if device is not None:
             for s in self.init_states:
                 s.to(device)
